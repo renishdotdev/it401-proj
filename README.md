@@ -2,6 +2,9 @@
 
 Automated backup and cleanup tool that runs time-scheduled tasks.
 
+## Requirements
+- Install Docker Engine from https://docs.docker.com/engine/install/
+
 ## What It Does
 
 - Backs up `/home/*/.config` and `/home/*/Documents` for all users daily
