@@ -1,0 +1,17 @@
+# Cron schedule format: minute hour day month weekday command
+# 
+# Run backup daily at 2 AM
+# 0 2 * * * /usr/local/bin/backup.sh >> /var/log/cron/cron.log 2>&1
+
+# Run cache cleanup daily at 3 AM
+# 0 3 * * * /usr/local/bin/rm-cache.sh >> /var/log/cron/cron.log 2>&1
+
+# Run logs cleanup weekly on Sunday at 4 AM
+# 0 4 * * 0 /usr/local/bin/rm-logs.sh >> /var/log/cron/cron.log 2>&1
+
+# For testing: Run all scripts every 5 minutes (comment out for production)
+* * * * * /usr/local/bin/backup.sh >> /var/log/cron/cron.log 2>&1
+* * * * * /usr/local/bin/rm-cache.sh >> /var/log/cron/cron.log 2>&1
+* * * * * /usr/local/bin/rm-logs.sh >> /var/log/cron/cron.log 2>&1
+
+# Empty line required at end of crontab
